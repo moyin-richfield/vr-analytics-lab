@@ -3,6 +3,118 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .ui-panel {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        min-width: auto;
+        max-width: calc(100vw - 20px);
+        font-size: 14px;
+    }
+    
+    .prediction-panel {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: calc(100vw - 20px);
+        font-size: 14px;
+    }
+    
+    .case-study-panel {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        max-width: calc(100vw - 20px);
+        font-size: 14px;
+    }
+    
+    .live-dashboard-panel {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        max-width: calc(100vw - 20px);
+        font-size: 14px;
+    }
+    
+    .advanced-viz-panel {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        max-width: calc(100vw - 20px);
+        font-size: 14px;
+    }
+    
+    .progress-panel {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        max-width: calc(100vw - 20px);
+        font-size: 14px;
+    }
+    
+    /* Stack panels vertically on mobile */
+    .ui-panel:not(.panel-minimized) {
+        z-index: 1000;
+    }
+    
+    .prediction-panel:not(.panel-minimized) {
+        z-index: 1001;
+    }
+    
+    .case-study-panel:not(.panel-minimized) {
+        z-index: 1002;
+    }
+    
+    .live-dashboard-panel:not(.panel-minimized) {
+        z-index: 1003;
+    }
+    
+    .advanced-viz-panel:not(.panel-minimized) {
+        z-index: 1004;
+    }
+    
+    .progress-panel:not(.panel-minimized) {
+        z-index: 1005;
+    }
+    
+    /* Make buttons touch-friendly */
+    button {
+        min-height: 44px;
+        min-width: 44px;
+        font-size: 16px;
+    }
+    
+    /* Adjust form elements for mobile */
+    input, select, textarea {
+        font-size: 16px;
+        padding: 8px;
+        min-height: 44px;
+    }
+    
+    /* Make text readable on mobile */
+    .panel-content {
+        padding: 10px;
+    }
+    
+    .panel-content h3 {
+        font-size: 1.1em;
+        margin: 10px 0 5px 0;
+    }
+    
+    .panel-content p {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+}
+
 .ui-panel {
     position: fixed;
     top: 20px;
