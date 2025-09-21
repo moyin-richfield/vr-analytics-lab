@@ -1,0 +1,47 @@
+{
+  "title": "South African VR Analytics Lab - Analysis Report",
+  "timestamp": "2025-09-21T21:12:20.465Z",
+  "summary": {
+    "total_revenue": 45843000,
+    "total_sales": 4200,
+    "region_breakdown": {
+      "Gauteng": {
+        "revenue": 19743000,
+        "sales": 1825
+      },
+      "Western Cape": {
+        "revenue": 14976000,
+        "sales": 1358
+      },
+      "KwaZulu-Natal": {
+        "revenue": 11124000,
+        "sales": 1017
+      }
+    },
+    "category_breakdown": {
+      "Electronics": {
+        "revenue": 40254000,
+        "sales": 2337
+      },
+      "Accessories": {
+        "revenue": 5589000,
+        "sales": 1863
+      }
+    },
+    "average_order_value": 10915
+  },
+  "filters": {},
+  "insights": [
+    "Top performing region: Gauteng with R19,743,000 revenue",
+    "Top performing category: Electronics with R40,254,000 revenue",
+    "Total business value: R45,843,000 across 4200 units sold",
+    "Average order value: R10,915 per transaction"
+  ],
+  "recommendations": [
+    "Focus on expanding KwaZulu-Natal market - currently underperforming",
+    "Leverage success in Electronics category for cross-selling opportunities",
+    "Consider implementing AI-driven pricing optimization",
+    "Invest in digital marketing for underperforming regions",
+    "Develop customer retention programs to increase average order value"
+  ]
+}

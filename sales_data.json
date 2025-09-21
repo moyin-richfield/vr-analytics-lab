@@ -1,0 +1,111 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop Pro",
+      "category": "Electronics",
+      "base_price": 24000,
+      "sales_data": [
+        {"month": "Jan", "sales": 45, "revenue": 1080000, "region": "Gauteng"},
+        {"month": "Feb", "sales": 52, "revenue": 1248000, "region": "Gauteng"},
+        {"month": "Mar", "sales": 38, "revenue": 912000, "region": "Gauteng"},
+        {"month": "Apr", "sales": 61, "revenue": 1464000, "region": "Gauteng"},
+        {"month": "May", "sales": 47, "revenue": 1128000, "region": "Gauteng"},
+        {"month": "Jun", "sales": 55, "revenue": 1320000, "region": "Gauteng"},
+        {"month": "Jan", "sales": 32, "revenue": 768000, "region": "Western Cape"},
+        {"month": "Feb", "sales": 41, "revenue": 984000, "region": "Western Cape"},
+        {"month": "Mar", "sales": 28, "revenue": 672000, "region": "Western Cape"},
+        {"month": "Apr", "sales": 35, "revenue": 840000, "region": "Western Cape"},
+        {"month": "May", "sales": 43, "revenue": 1032000, "region": "Western Cape"},
+        {"month": "Jun", "sales": 39, "revenue": 936000, "region": "Western Cape"},
+        {"month": "Jan", "sales": 25, "revenue": 600000, "region": "KwaZulu-Natal"},
+        {"month": "Feb", "sales": 28, "revenue": 672000, "region": "KwaZulu-Natal"},
+        {"month": "Mar", "sales": 22, "revenue": 528000, "region": "KwaZulu-Natal"},
+        {"month": "Apr", "sales": 31, "revenue": 744000, "region": "KwaZulu-Natal"},
+        {"month": "May", "sales": 26, "revenue": 624000, "region": "KwaZulu-Natal"},
+        {"month": "Jun", "sales": 33, "revenue": 792000, "region": "KwaZulu-Natal"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Smartphone X",
+      "category": "Electronics",
+      "base_price": 16000,
+      "sales_data": [
+        {"month": "Jan", "sales": 78, "revenue": 1248000, "region": "Gauteng"},
+        {"month": "Feb", "sales": 85, "revenue": 1360000, "region": "Gauteng"},
+        {"month": "Mar", "sales": 72, "revenue": 1152000, "region": "Gauteng"},
+        {"month": "Apr", "sales": 91, "revenue": 1456000, "region": "Gauteng"},
+        {"month": "May", "sales": 88, "revenue": 1408000, "region": "Gauteng"},
+        {"month": "Jun", "sales": 95, "revenue": 1520000, "region": "Gauteng"},
+        {"month": "Jan", "sales": 65, "revenue": 1040000, "region": "Western Cape"},
+        {"month": "Feb", "sales": 71, "revenue": 1136000, "region": "Western Cape"},
+        {"month": "Mar", "sales": 58, "revenue": 928000, "region": "Western Cape"},
+        {"month": "Apr", "sales": 67, "revenue": 1072000, "region": "Western Cape"},
+        {"month": "May", "sales": 74, "revenue": 1184000, "region": "Western Cape"},
+        {"month": "Jun", "sales": 82, "revenue": 1312000, "region": "Western Cape"},
+        {"month": "Jan", "sales": 45, "revenue": 720000, "region": "KwaZulu-Natal"},
+        {"month": "Feb", "sales": 52, "revenue": 832000, "region": "KwaZulu-Natal"},
+        {"month": "Mar", "sales": 38, "revenue": 608000, "region": "KwaZulu-Natal"},
+        {"month": "Apr", "sales": 48, "revenue": 768000, "region": "KwaZulu-Natal"},
+        {"month": "May", "sales": 55, "revenue": 880000, "region": "KwaZulu-Natal"},
+        {"month": "Jun", "sales": 61, "revenue": 976000, "region": "KwaZulu-Natal"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Wireless Headphones",
+      "category": "Accessories",
+      "base_price": 3000,
+      "sales_data": [
+        {"month": "Jan", "sales": 120, "revenue": 360000, "region": "Gauteng"},
+        {"month": "Feb", "sales": 135, "revenue": 405000, "region": "Gauteng"},
+        {"month": "Mar", "sales": 98, "revenue": 294000, "region": "Gauteng"},
+        {"month": "Apr", "sales": 156, "revenue": 468000, "region": "Gauteng"},
+        {"month": "May", "sales": 142, "revenue": 426000, "region": "Gauteng"},
+        {"month": "Jun", "sales": 168, "revenue": 504000, "region": "Gauteng"},
+        {"month": "Jan", "sales": 89, "revenue": 267000, "region": "Western Cape"},
+        {"month": "Feb", "sales": 102, "revenue": 306000, "region": "Western Cape"},
+        {"month": "Mar", "sales": 76, "revenue": 228000, "region": "Western Cape"},
+        {"month": "Apr", "sales": 94, "revenue": 282000, "region": "Western Cape"},
+        {"month": "May", "sales": 108, "revenue": 324000, "region": "Western Cape"},
+        {"month": "Jun", "sales": 125, "revenue": 375000, "region": "Western Cape"},
+        {"month": "Jan", "sales": 65, "revenue": 195000, "region": "KwaZulu-Natal"},
+        {"month": "Feb", "sales": 72, "revenue": 216000, "region": "KwaZulu-Natal"},
+        {"month": "Mar", "sales": 58, "revenue": 174000, "region": "KwaZulu-Natal"},
+        {"month": "Apr", "sales": 78, "revenue": 234000, "region": "KwaZulu-Natal"},
+        {"month": "May", "sales": 85, "revenue": 255000, "region": "KwaZulu-Natal"},
+        {"month": "Jun", "sales": 92, "revenue": 276000, "region": "KwaZulu-Natal"}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Gaming Console",
+      "category": "Electronics",
+      "base_price": 10000,
+      "sales_data": [
+        {"month": "Jan", "sales": 25, "revenue": 250000, "region": "Gauteng"},
+        {"month": "Feb", "sales": 31, "revenue": 310000, "region": "Gauteng"},
+        {"month": "Mar", "sales": 18, "revenue": 180000, "region": "Gauteng"},
+        {"month": "Apr", "sales": 42, "revenue": 420000, "region": "Gauteng"},
+        {"month": "May", "sales": 35, "revenue": 350000, "region": "Gauteng"},
+        {"month": "Jun", "sales": 48, "revenue": 480000, "region": "Gauteng"},
+        {"month": "Jan", "sales": 15, "revenue": 150000, "region": "Western Cape"},
+        {"month": "Feb", "sales": 22, "revenue": 220000, "region": "Western Cape"},
+        {"month": "Mar", "sales": 12, "revenue": 120000, "region": "Western Cape"},
+        {"month": "Apr", "sales": 28, "revenue": 280000, "region": "Western Cape"},
+        {"month": "May", "sales": 19, "revenue": 190000, "region": "Western Cape"},
+        {"month": "Jun", "sales": 33, "revenue": 330000, "region": "Western Cape"},
+        {"month": "Jan", "sales": 12, "revenue": 120000, "region": "KwaZulu-Natal"},
+        {"month": "Feb", "sales": 18, "revenue": 180000, "region": "KwaZulu-Natal"},
+        {"month": "Mar", "sales": 10, "revenue": 100000, "region": "KwaZulu-Natal"},
+        {"month": "Apr", "sales": 22, "revenue": 220000, "region": "KwaZulu-Natal"},
+        {"month": "May", "sales": 16, "revenue": 160000, "region": "KwaZulu-Natal"},
+        {"month": "Jun", "sales": 25, "revenue": 250000, "region": "KwaZulu-Natal"}
+      ]
+    }
+  ],
+  "regions": ["Gauteng", "Western Cape", "KwaZulu-Natal"],
+  "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+  "categories": ["Electronics", "Accessories"]
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+
+<body>
+    <a-scene>
+        <!-- Sky -->
+        <a-sky color="#111"></a-sky>
+
+        <!-- Lighting -->
+        <a-light type="ambient" color="#404040"></a-light>
+        <a-light type="directional" position="2 4 2" color="#ffffff"></a-light>
+        
+            <!-- Camera with cursor and look controls -->
+            <a-camera position="0 2.5 2" look-controls wasd-controls="fly: true">
+            <a-cursor></a-cursor>
+        </a-camera>
+
+        <!-- Main chart container -->
+        <a-entity id="chart-container" position="0 1.5 -3"></a-entity>
+        
+            <!-- Prediction area - separate from main charts -->
+            <a-entity id="prediction-container" position="6 1.5 -3"></a-entity>
+
+            <!-- Advanced visualizations area - separate from main charts -->
+            <a-entity id="advanced-viz-container" position="-8 1.5 -3"></a-entity>
+        
+        <!-- Title - Centered and visible -->
+        <a-text value="South African VR Analytics Lab" position="0 4 0" align="center" scale="1.8 1.8 1.8" color="#4CC3D9"></a-text>
+        
+        <!-- Instructions - Centered below title -->
+        <a-text value="AI-Powered Business Intelligence for SA Markets" position="0 3.5 0" align="center" scale="1 1 1" color="#ffffff"></a-text>
+        
+        <!-- Navigation Instructions -->
+        <a-text value="🎮 Navigation: WASD to move, Mouse to look around, Click to interact" position="0 2.8 0" align="center" scale="0.4 0.4 0.4" color="#cccccc"></a-text>
+    </a-scene>
+    
+    <!-- Control Panel -->
+    <div class="ui-panel" id="ui-panel">
+        <div class="panel-header">
+            <h2>📊 SA Market Analytics</h2>
+            <button onclick="togglePanel('ui-panel')" class="minimize-btn">−</button>
+        </div>
+        <div class="panel-content">
+        
+        <div>
+            <label>Region:</label>
+            <select id="regionFilter">
+                <option value="">All Regions</option>
+            </select>
+        </div>
+        
+        <div>
+            <label>Category:</label>
+            <select id="categoryFilter">
+                <option value="">All Categories</option>
+            </select>
+        </div>
+        
+        <div>
+            <label>Month:</label>
+            <select id="monthFilter">
+                <option value="">All Months</option>
+            </select>
+        </div>
+        
+        <button onclick="applyFilters()">Apply Filters</button>
+        <button onclick="resetFilters()">Reset</button>
+        <button onclick="showSummary()">Show Summary</button>
+        <button onclick="toggleLiveDashboard()">📊 Live Dashboard</button>
+        <button onclick="toggleAdvancedViz()">📈 Advanced Charts</button>
+        <button onclick="exportAnalysis()">💾 Export Analysis</button>
+        <button onclick="caseStudyManager.showCaseStudyPanel()">📚 Case Studies</button>
+        </div>
+    </div>
+    
+    <!-- AI Prediction Panel -->
+    <div class="prediction-panel" id="prediction-panel">
+        <div class="panel-header">
+            <h2>🤖 AI Sales Predictions</h2>
+            <button onclick="togglePanel('prediction-panel')" class="minimize-btn">−</button>
+        </div>
+        <div class="panel-content">
+        <p style="font-size: 0.9em; color: #666; margin-bottom: 15px;">Analyze South African market trends and predict future sales using AI</p>
+        
+        <div>
+            <label>Product:</label>
+            <select id="productSelect">
+                <option value="">Select Product</option>
+            </select>
+        </div>
+        
+        <div>
+            <label>Province:</label>
+            <select id="predictionRegion">
+                <option value="Gauteng">Gauteng (Johannesburg/Pretoria)</option>
+                <option value="Western Cape">Western Cape (Cape Town)</option>
+                <option value="KwaZulu-Natal">KwaZulu-Natal (Durban)</option>
+            </select>
+        </div>
+        
+        <div>
+            <label>Price Change (%):</label>
+            <input type="number" id="priceChange" value="0" step="5" min="-50" max="50">
+            <small>Consider inflation and market conditions</small>
+        </div>
+        
+        <div>
+            <label>Marketing Budget Change (%):</label>
+            <input type="number" id="marketingChange" value="0" step="10" min="-100" max="100">
+            <small>Digital marketing, traditional ads, events</small>
+        </div>
+        
+        <button onclick="makePrediction()">🔮 Predict Sales</button>
+        
+        <div id="predictionResult" class="prediction-result" style="display: none;">
+            <h3>📊 AI Prediction Result:</h3>
+            <div id="predictionContent"></div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Case Studies Panel -->
+    <div class="case-study-panel" id="case-study-panel">
+        <!-- Case studies will be loaded here -->
+    </div>
+
+    <!-- Live Dashboard Panel -->
+    <div class="live-dashboard-panel" id="live-dashboard-panel" style="display: none;">
+        <h3>📊 Live Dashboard</h3>
+        <div class="live-metrics">
+            <div class="metric">
+                <span class="metric-label">Total Revenue:</span>
+                <span class="metric-value" id="live-revenue">R0</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Total Sales:</span>
+                <span class="metric-value" id="live-sales">0 units</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Active Users:</span>
+                <span class="metric-value" id="live-users">0</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Conversion Rate:</span>
+                <span class="metric-value" id="live-conversion">0%</span>
+            </div>
+            <div class="metric">
+                <span class="metric-label">Avg Order Value:</span>
+                <span class="metric-value" id="live-aov">R0</span>
+            </div>
+        </div>
+        <div class="trending-products">
+            <h4>🔥 Trending Products</h4>
+            <div id="trending-list"></div>
+        </div>
+        <div class="regional-performance">
+            <h4>🌍 Regional Performance</h4>
+            <div id="regional-list"></div>
+        </div>
+        <div class="live-status">
+            <span id="live-status">🟢 Live</span>
+            <span id="last-update">Last updated: --</span>
+        </div>
+    </div>
+
+        <!-- Advanced Visualization Panel -->
+        <div class="advanced-viz-panel" id="advanced-viz-panel" style="display: none;">
+            <div class="panel-header">
+                <h3>📈 Advanced Visualizations</h3>
+                <button onclick="toggleAdvancedViz()" class="close-btn">✕</button>
+            </div>
+            <div class="panel-content">
+                <div class="viz-controls">
+                    <button onclick="createHeatMap()">🔥 Heat Map</button>
+                    <button onclick="createScatterPlot()">📊 Scatter Plot</button>
+                    <button onclick="createTrendLine()">📈 Trend Line</button>
+                    <button onclick="createCorrelationMatrix()">🔗 Correlation</button>
+                </div>
+                <div class="viz-info">
+                    <p><strong>Data Source:</strong> Full sales dataset (all products, regions, months)</p>
+                    <p><strong>Heat Map:</strong> Revenue intensity by region-product combinations with numerical values</p>
+                    <p><strong>Scatter Plot:</strong> Sales vs Revenue relationships with average prices</p>
+                    <p><strong>Trend Line:</strong> Sales performance over time - shows if products are growing, declining, or stable</p>
+                    <p><strong>Correlation:</strong> Regional performance comparisons with revenue data</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Progress Panel -->
+    <div class="progress-panel" id="progress-panel">
+        <h3>🏆 Your Progress</h3>
+        <div class="progress-stats">
+            <div class="stat">
+                <span class="stat-label">Points:</span>
+                <span class="stat-value">0</span>
+            </div>
+            <div class="stat">
+                <span class="stat-label">Badges:</span>
+                <span class="stat-value">0</span>
+            </div>
+        </div>
+    </div>
+    
+    <script src="static/app.js"></script>
+    <script src="static/case-studies.js"></script>
+</body>
+
+</html>

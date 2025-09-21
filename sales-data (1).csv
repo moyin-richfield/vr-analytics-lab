@@ -1,0 +1,13 @@
+Metric,Value
+Total Revenue,R45,843,000
+Total Sales,4200
+Average Order Value,R10,915
+
+Region,Revenue,Sales
+Gauteng,R19,743,000,1825
+Western Cape,R14,976,000,1358
+KwaZulu-Natal,R11,124,000,1017
+
+Category,Revenue,Sales
+Electronics,R40,254,000,2337
+Accessories,R5,589,000,1863

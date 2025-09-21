@@ -1,0 +1,178 @@
+{
+  "case_studies": [
+    {
+      "id": 1,
+      "title": "Cape Town Tech Startup Crisis",
+      "description": "A local tech startup is struggling with declining sales. Analyze their data and provide strategic recommendations.",
+      "scenario": "TechCorp SA has seen a 30% drop in sales over the last quarter. As a business analyst, you need to identify the root causes and suggest solutions.",
+      "learning_objectives": [
+        "Identify sales trends and patterns",
+        "Apply statistical analysis to business problems",
+        "Make data-driven recommendations",
+        "Understand market segmentation"
+      ],
+      "data": {
+        "company": "TechCorp SA",
+        "industry": "Technology",
+        "location": "Cape Town",
+        "employees": 45,
+        "revenue_data": [
+          {"month": "Jan", "revenue": 2500000, "customers": 120, "region": "Western Cape"},
+          {"month": "Feb", "revenue": 2200000, "customers": 115, "region": "Western Cape"},
+          {"month": "Mar", "revenue": 1800000, "customers": 98, "region": "Western Cape"},
+          {"month": "Apr", "revenue": 1600000, "customers": 85, "region": "Western Cape"},
+          {"month": "May", "revenue": 1400000, "customers": 72, "region": "Western Cape"},
+          {"month": "Jun", "revenue": 1200000, "customers": 65, "region": "Western Cape"}
+        ],
+        "competitor_data": [
+          {"company": "TechRival", "market_share": 35, "price_advantage": 15},
+          {"company": "InnovateSA", "market_share": 25, "price_advantage": 8},
+          {"company": "TechCorp SA", "market_share": 20, "price_advantage": 0}
+        ]
+      },
+      "questions": [
+        {
+          "id": 1,
+          "question": "What is the main trend in TechCorp's revenue?",
+          "options": ["Increasing", "Decreasing", "Stable", "Fluctuating"],
+          "correct": 1,
+          "explanation": "Revenue has been consistently decreasing from R2.5M to R1.2M over 6 months."
+        },
+        {
+          "id": 2,
+          "question": "What percentage of market share does TechCorp have?",
+          "options": ["15%", "20%", "25%", "30%"],
+          "correct": 1,
+          "explanation": "TechCorp has 20% market share, which is the lowest among competitors."
+        },
+        {
+          "id": 3,
+          "question": "What would be the best strategy to improve sales?",
+          "options": ["Increase prices", "Reduce marketing budget", "Focus on customer retention", "Expand to new regions"],
+          "correct": 2,
+          "explanation": "Customer retention is crucial as they've lost 55 customers in 6 months."
+        }
+      ],
+      "recommendations": [
+        "Implement customer retention programs",
+        "Analyze competitor pricing strategies",
+        "Focus on Western Cape market expansion",
+        "Invest in customer service improvements"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Johannesburg Retail Chain Expansion",
+      "description": "A retail chain wants to expand across South Africa. Use data analytics to recommend the best locations.",
+      "scenario": "ShopRight SA is planning to open 5 new stores. You need to analyze demographic and economic data to recommend optimal locations.",
+      "learning_objectives": [
+        "Apply demographic analysis",
+        "Use geographic data for business decisions",
+        "Understand market potential",
+        "Evaluate expansion strategies"
+      ],
+      "data": {
+        "company": "ShopRight SA",
+        "industry": "Retail",
+        "current_stores": 12,
+        "expansion_budget": 50000000,
+        "candidate_cities": [
+          {"city": "Durban", "population": 3500000, "avg_income": 18000, "competition": "Medium", "growth_rate": 2.5},
+          {"city": "Port Elizabeth", "population": 1200000, "avg_income": 15000, "competition": "Low", "growth_rate": 1.8},
+          {"city": "Bloemfontein", "population": 750000, "avg_income": 14000, "competition": "Low", "growth_rate": 1.2},
+          {"city": "Pretoria", "population": 2800000, "avg_income": 22000, "competition": "High", "growth_rate": 3.1},
+          {"city": "Cape Town", "population": 4600000, "avg_income": 25000, "competition": "High", "growth_rate": 2.8}
+        ]
+      },
+      "questions": [
+        {
+          "id": 1,
+          "question": "Which city has the highest population?",
+          "options": ["Durban", "Cape Town", "Pretoria", "Port Elizabeth"],
+          "correct": 1,
+          "explanation": "Cape Town has the highest population at 4.6 million people."
+        },
+        {
+          "id": 2,
+          "question": "Which city offers the best growth potential?",
+          "options": ["Durban", "Pretoria", "Cape Town", "Bloemfontein"],
+          "correct": 1,
+          "explanation": "Pretoria has the highest growth rate at 3.1% and good average income."
+        },
+        {
+          "id": 3,
+          "question": "What factor should be prioritized for expansion?",
+          "options": ["Population only", "Income only", "Growth rate only", "Balanced approach"],
+          "correct": 3,
+          "explanation": "A balanced approach considering population, income, competition, and growth rate is best."
+        }
+      ],
+      "recommendations": [
+        "Prioritize Pretoria and Cape Town for high-income potential",
+        "Consider Durban for population density",
+        "Avoid Bloemfontein due to low growth rate",
+        "Analyze competition levels before final decisions"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Durban Manufacturing Efficiency",
+      "description": "A manufacturing company needs to optimize their production processes using data analytics.",
+      "scenario": "AutoParts SA is experiencing production delays and quality issues. Use data to identify bottlenecks and improve efficiency.",
+      "learning_objectives": [
+        "Apply process optimization techniques",
+        "Use quality control metrics",
+        "Understand production analytics",
+        "Implement efficiency improvements"
+      ],
+      "data": {
+        "company": "AutoParts SA",
+        "industry": "Manufacturing",
+        "location": "Durban",
+        "production_lines": 4,
+        "daily_capacity": 1000,
+        "quality_metrics": [
+          {"line": "Line A", "efficiency": 85, "defect_rate": 3.2, "downtime": 45},
+          {"line": "Line B", "efficiency": 92, "defect_rate": 1.8, "downtime": 25},
+          {"line": "Line C", "efficiency": 78, "defect_rate": 4.5, "downtime": 60},
+          {"line": "Line D", "efficiency": 88, "defect_rate": 2.1, "downtime": 35}
+        ],
+        "cost_analysis": {
+          "material_cost": 4500000,
+          "labor_cost": 2800000,
+          "overhead_cost": 1200000,
+          "quality_cost": 350000
+        }
+      },
+      "questions": [
+        {
+          "id": 1,
+          "question": "Which production line has the highest efficiency?",
+          "options": ["Line A", "Line B", "Line C", "Line D"],
+          "correct": 1,
+          "explanation": "Line B has the highest efficiency at 92%."
+        },
+        {
+          "id": 2,
+          "question": "Which line needs the most improvement?",
+          "options": ["Line A", "Line B", "Line C", "Line D"],
+          "correct": 2,
+          "explanation": "Line C has the lowest efficiency (78%) and highest defect rate (4.5%)."
+        },
+        {
+          "id": 3,
+          "question": "What is the total daily production cost?",
+          "options": ["R6.5M", "R7.2M", "R8.1M", "R8.85M"],
+          "correct": 3,
+          "explanation": "Total cost = R4.5M + R2.8M + R1.2M + R0.35M = R8.85M"
+        }
+      ],
+      "recommendations": [
+        "Focus on improving Line C efficiency",
+        "Implement quality control measures",
+        "Reduce downtime across all lines",
+        "Optimize material and labor costs"
+      ]
+    }
+  ]
+}
